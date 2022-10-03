@@ -4,9 +4,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import javax.imageio.ImageIO;
 
-/**
- * @author josuerom
- */
 public class AspectRatioImage {
 
     public static void main(String[] args) {
