@@ -13,7 +13,6 @@ public class EsUnNumeroPrimo {
             }
             j--;
          }
-         
          if (aux == 2) {
             System.out.println(i);
          }

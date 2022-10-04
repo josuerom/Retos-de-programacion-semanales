@@ -23,12 +23,7 @@ public class AspectRatioImage {
             System.out.println("La url está mal escrita o tiene un formato no válido");
         } catch (IOException e) {
             System.out.println("Error de lectura, intentelo de nuevo");
-        } catch (NullPointerException e) {
-            System.out.println("La url pasada no contiene una imagen o está mal formada");
-        } catch (Exception e) {
-            System.out.println("Error desconocido, contacte con el desarrollador: " + e.getMessage());
         }
-
     }
 
     private static int maximoComunDivisor(int width, int height) {
