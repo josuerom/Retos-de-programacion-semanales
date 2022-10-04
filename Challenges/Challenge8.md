@@ -14,3 +14,12 @@
  * - Subiré una posible solución al ejercicio el lunes siguiente al de su publicación.
  *
  */
+ 
+ /*
+    El proyecto debe llevar:
+    DER
+    UML
+    Test --> prueba
+
+    Aplicar MVC
+*/
