@@ -24,7 +24,7 @@ public class DecimalABinario {
         for (int s = invertido.length()-1; s >= 0; s--) {
             binario += invertido.charAt(s);
         }
-        System.out.printf("[%s], [%s]", binario, invertido);
+        System.out.printf("El número %d en binario es = %s", decimal, binario);
    }
 
    public static void pc2Read() {
