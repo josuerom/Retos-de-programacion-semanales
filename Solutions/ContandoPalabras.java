@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class ContandoPalabras {
 
@@ -8,21 +9,26 @@ public class ContandoPalabras {
       String[] arr = text.split("[ .,;!¡¿?] ?");
       Arrays.sort(arr);
       int c = 0;
-      System.out.println(Arrays.deepToString(arr));
+      //System.out.println(Arrays.deepToString(arr));
 
       repeat: for (int i = 0; i < arr.length-1; i++) {
-         String key = arr[i];
+         if (arr[i].equals(arr[i+1])) {
+            String key = arr[i];
 
-         for (int j = i; j < arr.length-1; j++) {
-            if (key.equals(arr[j+1])) {
-               c++;
+            for (int j = i; j < arr.length-1; j++) {
+               if (key.equals(arr[j+1])) {
+                  c++;
+               }
             }
-         }
-         continue  repeat;
-         if (c != 0) {
+            if (c != 0) {
                System.out.printf("[%s, %d]\n", arr[i], ++c);
+               i += c;
+            }
+            c = 0;
+         } else {
+            c = 0;
+            continue repeat;
          }
-         c = 0;
       }
    }
 }

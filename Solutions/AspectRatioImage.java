@@ -6,30 +6,30 @@ import javax.imageio.ImageIO;
 
 public class AspectRatioImage {
 
-    public static void main(String[] args) {
-        BufferedImage image = null;
+   public static void main(String[] args) {
+      BufferedImage image = null;
 
-        try {
-            URL url = new URL("https://raw.githubusercontent.com/mouredev/mouredev/master/mouredev_github_profile.png");
-            image = ImageIO.read(url);
+      try {
+         URL url = new URL("https://raw.githubusercontent.com/mouredev/mouredev/master/mouredev_github_profile.png");
+         image = ImageIO.read(url);
 
-            int width = image.getWidth();
-            int height = image.getHeight();
-            int MCD = maximoComunDivisor(width, height);
+         int width = image.getWidth();
+         int height = image.getHeight();
+         int MCD = maximoComunDivisor(width, height);
 
-            String ratio = width / MCD + ":" + height / MCD;
-            System.out.println(width + "x" + height + "px" + "\n" + ratio);
-        } catch (MalformedURLException e) {
-            System.out.println("La url está mal escrita o tiene un formato no válido");
-        } catch (IOException e) {
-            System.out.println("Error de lectura, intentelo de nuevo");
-        }
-    }
+         String ratio = width / MCD + ":" + height / MCD;
+         System.out.println(width + "x" + height + "px" + "\n" + ratio);
+      } catch (MalformedURLException e) {
+         System.out.println("La url está mal escrita o tiene un formato no válido");
+      } catch (IOException e) {
+         System.out.println("Error de lectura, intentelo de nuevo");
+      }
+   }
 
-    private static int maximoComunDivisor(int width, int height) {
-        if (height == 0) {
-            return width;
-        }
-        return maximoComunDivisor(height, width % height);
-    }
+   private static int maximoComunDivisor(int width, int height) {
+      if (height == 0) {
+         return width;
+      }
+      return maximoComunDivisor(height, width % height);
+   }
 }
