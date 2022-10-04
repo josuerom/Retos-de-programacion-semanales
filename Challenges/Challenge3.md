@@ -7,6 +7,7 @@
  *
  * Enunciado: Escribe un programa que se encargue de comprobar si un número es o no primo.
  * Hecho esto, imprime los números primos entre 1 y 100.
+>>>>>>> 4e2a500844291cd541c9c3b119758c6069045580
  *
  * Información adicional:
  * - Usa el canal de nuestro discord (https://mouredev.com/discord) "🔁reto-semanal" para preguntas, dudas o prestar ayuda a la acomunidad.

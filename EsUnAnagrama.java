@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class EsUnAnagrama {
 
    public static void main(String[] args) {
-      System.out.println(pc2Read("Rata", "tara"));
+      System.out.println(pc2Read("Rata", "taRa"));
    }
 
    public static boolean pc2Read(String word1, String word2) {
