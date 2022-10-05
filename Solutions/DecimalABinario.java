@@ -17,8 +17,7 @@ public class DecimalABinario {
         }
         for (int i = binario.length()-1, space = 0; i >= 0; i--) {
             System.out.print(binario.charAt(i));
-            space++;
-            if (space % 4 == 0) {
+            if (++space % 4 == 0) {
                 System.out.print(" ");
             }
         }
@@ -34,8 +33,13 @@ public class DecimalABinario {
         try {
            line = buffer.readLine();
            decimal = Integer.parseInt(line);
+
+           while (decimal != 0) {
+               convertBinary(decimal);
+               line = buffer.readLine();
+               decimal = Integer.parseInt(line);
+           }
            buffer.close();
-           convertBinary(decimal);
         } catch (NullPointerException e) {
            e.printStackTrace();
         } catch (IOException e) {
