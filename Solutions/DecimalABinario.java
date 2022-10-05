@@ -9,35 +9,33 @@ public class DecimalABinario {
    }
 
    public static void convertBinary(int decimal) {
-        String invertido = "", binario = "";
-        int numero = decimal;
+        String binario = "";
 
-        while (numero >= 1) {
-            if (numero % 2 == 0) {
-                invertido += "0";
-            } else {
-                invertido += "1";
+        while (decimal >= 1) {
+            binario += decimal % 2;
+            decimal /= 2;
+        }
+        for (int i = binario.length()-1, space = 0; i >= 0; i--) {
+            System.out.print(binario.charAt(i));
+            space++;
+            if (space % 4 == 0) {
+                System.out.print(" ");
             }
-            numero /= 2;
         }
-
-        for (int s = invertido.length()-1; s >= 0; s--) {
-            binario += invertido.charAt(s);
-        }
-        System.out.printf("El número %d en binario es = %s", decimal, binario);
+        System.out.println();
    }
 
    public static void pc2Read() {
         String line;
-        int n;
+        int decimal;
 
         BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
 
         try {
            line = buffer.readLine();
-           n = Integer.parseInt(line);
+           decimal = Integer.parseInt(line);
            buffer.close();
-           convertBinary(n);
+           convertBinary(decimal);
         } catch (NullPointerException e) {
            e.printStackTrace();
         } catch (IOException e) {
